@@ -3,16 +3,15 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>non profit / small business site</title>
   <meta name="description" content="non profit / small business site"> 
+  <meta name="author" content="*****">
   
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <!--<link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet">  
-  -->
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <meta name="theme-color" content="#fafafa">
@@ -21,22 +20,91 @@
 
 <body>
   <header id="header" class="main_header">
-    <div class="logo"><a href="/"><img src="icon.png"></a></div>
+    <div class="logo"><a href="/"><img src="icon.png"><span class="logo_text">restaurant</span></a></div>
+    <div class="menu-trigger" id="hamburger_menu">
+      <span></span>
+      <span></span>
+      <span></span>
+      <!--<span class="line"></span><span class="line"></span></div>-->
     <ul class="nav_list">
       <li class="nav_list_items active"><a href="https://#">home</a></li>
       <li class="nav_list_items"><a href="https://#">about</a></li>
       <li class="nav_list_items"><a href="https://#">Home</a></li>
-      <li class="nav_list_items"><a href="https://#">Home</a></li>
       <li class="nav_list_items"><a href="https://#">contact us</a></li>
     </ul>
     
+    
   </header>
+  <nav class="mobile_nav">
+    <ul class="nav_list_mobile">
+      <li class="nav_list_items active"><a href="https://#">home</a></li>
+      <li class="nav_list_items"><a href="https://#">about</a></li>
+      <li class="nav_list_items"><a href="https://#">Home</a></li>
+      <li class="nav_list_items"><a href="https://#">contact us</a></li>
+    </ul>
+  </nav>
   <section class="main_content">
     <p>Hello world!</p>
   </section>
+  <section class="contact_us">
+    <form action="#" class="form">
+
+      <div class="input-group">
+        <label for="name" class="label">Name</label>
+        <input id="name" placeholder="webcrunch" type="text" class="input" onblur="validateName()">
+        <span class="error-message"></span>
+        <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+  
+        <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+        </svg>
+      </div>
+  
+      <div class="input-group">
+        <label for="email" class="label">Email</label>
+        <input id="email" type="email" class="input" autocomplete placeholder="andy@web-crunch.com" onblur="validateEmail()">
+        <span class="error-message"></span>
+        <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+  
+        <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+        </svg>
+      </div>
+  
+      <div class="input-group">
+        <label for="message" class="label">Message</label>
+        <textarea id="message" placeholder="your message" class="input" rows="6" style="resize:vertical" onblur="validateTextArea()"></textarea>
+        <span class="error-message"></span>
+        <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+  
+        <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+        </svg>
+      </div>
+  
+  
+    
+  
+      <input type="submit" class="button" value="Send">
+  
+    </form>
+
+  </section>
 
   <footer>
-    <p class="copyright">&copy; 2021 - This is Footer</p>
+    <address>
+      Designed by <a href="mailto:webmaster@example.com">A B</a><br>
+
+      You may also want to visit us: Box 564, Disneyland<br>USA 12345<br>
+      <span class="last_mod"></span>
+      </address>
+    <p class="copyright">&copy;&#169; 2021 - This is Footer</p>
     <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     <div>Images from <a href="https://unsplash.com" title="Unsplash">Unsplash</a></div>
     <div>Videos from <a href="https://www.pexels.com" title="Pexels">Pexels</a></div>
