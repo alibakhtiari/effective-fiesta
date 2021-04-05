@@ -1,0 +1,134 @@
+html{
+  color: #333333;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Header */
+.main_header {
+  display: inline-block
+}
+.logo {
+  max-width: 200px
+}
+.nav_list {
+  list-style: none
+}
+.nav_list_items a {
+  text-transform: capitalize
+}
+.nav_list_items{
+  display: inline-block;
+  padding: 15px;
+  transition: all .4s
+}
+.nav_list_items:hover,.nav_list_items.active:hover{
+  background-color: black;
+  color: white
+}
+.nav_list_items.active {
+  background-color: #cccccc
+}
+
+
+
+
+
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+textarea {
+  resize: vertical;
+}
+
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+
+.invisible {
+  visibility: hidden;
+}
+
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+  /* getting links done */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+
+
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+/* things about tables */
+
+  thead {
+    display: table-header-group;
+  }
+
+
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
