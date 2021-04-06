@@ -104,7 +104,8 @@ ul{
   text-transform: uppercase;
 }
 .nav_list {
-  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 .nav_list_items a,.logo a {
   text-transform: capitalize;
