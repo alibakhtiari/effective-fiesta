@@ -7,6 +7,16 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
 }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
 ::-webkit-scrollbar {
   width: 0.65em;
 }
@@ -43,6 +53,7 @@ ul{
   background-image: url(/contents/img/shourav-sheikh-a66sGfOnnqQ-unsplash.jpg);
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
 }
 #hero:hover .overlay{
@@ -215,11 +226,6 @@ span.line {
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
-
-
-
-
-
 .nav_list_mobile{
   display:none;
   padding: 50px 0;
@@ -248,29 +254,41 @@ span.line {
 
 /* Main */
 .main_section{
-  width: 90%;
-  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;  
+  text-align: center;
+  padding: 40px 80px 80px;
+  background: #efefef;
+}
+.main_section h1 {
+  font-size: 3rem;
+  padding: 40px;
+  border-bottom: 2px dashed #084b27;
+}
+.card {
+  display: inline-block;
+  background: #fff;
+  width: 80%;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.card p {
+  padding: 30px 0;
+}
+.card a {
+  padding: 10px 20px;
+  background: #ca3d2a;
+  color: #ffffff;
+  border-radius: 9px;
 }
 
-
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+@media screen and (max-width: 600px) {
+  .main_section{
+    padding: 10px;
+  }
+  .card{margin: 20px auto;}
 }
 
 
@@ -357,6 +375,9 @@ table#food_menu tbody tr:not(:last-child) {
     width: 100%;
     height: 500px;
     background-image: url(/contents/img/masimo-grabar-NzHRSLhc6Cs-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   .contact_form{
     width: 70%;
@@ -448,7 +469,11 @@ table#food_menu tbody tr:not(:last-child) {
     filter: brightness(110%);
   }  
 
-
+/* footer */
+footer{
+  background-color: #ccc;
+  padding: 10px 40px;
+}
 
 /*CSS Grid*/
 
