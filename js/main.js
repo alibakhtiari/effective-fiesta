@@ -12,7 +12,6 @@ var last_mod = document.querySelector('.last_mod');
 var bom_mod = document.lastModified;
 last_mod.innerHTML = 'last updated or modified : ' + bom_mod;
 
-
 /*smooth scroll*/
 document
     .querySelectorAll('.nav__item a[href^="#"]')
@@ -36,36 +35,36 @@ document
 
 
     /* form validation */
+    var vName,vEmail,vMessage;
     function validateName() {
         var  fName = document.querySelector('#name');
         if (fName.value.trim() === "") {
           this.setStatus(fName, 'Name cannot be blank', "error");
+          vName = true;
         } else {
           this.setStatus(fName, null, "success");
         }
-    
     };
     function validateEmail() {
         var  f_EM = document.querySelector('#email');
           const regex = /\S+@\S+\.\S+/;
           if (regex.test( f_EM.value)) {
             this.setStatus( f_EM, null, "success");
+            vEmail = true;
           } else {
             this.setStatus( f_EM, "Please enter valid email address", "error");
           }
-    
-    
     };
     function  validateTextArea() {
         var  f_TA = document.querySelector('#message');
         if ( f_TA.value.trim() === "") {
-          this.setStatus( f_TA, 'Enter your message', "error");
+          this.setStatus( f_TA, 'Message cannot be blank', "error");
+          vMessage = true;
         } else {
           this.setStatus( f_TA, null, "success");
         }
-    
     };
-    function   setStatus(field, message, status) {
+    function setStatus(field, message, status) {
         const successIcon = field.parentElement.querySelector('.icon-success');
         const errorIcon = field.parentElement.querySelector('.icon-error');
         const errorMessage = field.parentElement.querySelector('.error-message');
@@ -75,6 +74,7 @@ document
           if (errorMessage) {errorMessage.innerText = "";}
           successIcon.classList.remove('hidden');
           field.classList.remove('input-error');
+          field.classList.add('input-success');
         }
     
         if (status === "error") {
@@ -82,6 +82,7 @@ document
           field.parentElement.querySelector('.error-message').innerText = message;
           errorIcon.classList.remove('hidden');
           field.classList.add('input-error');
+          field.classList.remove('input-success');
         }
       }
     

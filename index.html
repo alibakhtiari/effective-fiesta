@@ -11,47 +11,59 @@
   <meta name="author" content="*****">
   
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <meta name="theme-color" content="#fafafa">
   <meta name="description" content="non profit / small business site">
 </head>
 
 <body>
-  <header id="header" class="main_header">
-    <div class="logo"><a href="/"><img src="icon.png"><span class="logo_text">restaurant</span></a></div>
+  <header id="header" class="grid main_header">
     <div class="menu-trigger" id="hamburger_menu">
       <span></span>
       <span></span>
       <span></span>
-      <!--<span class="line"></span><span class="line"></span></div>-->
-    <ul class="nav_list">
-      <li class="nav_list_items active"><a href="https://#">home</a></li>
-      <li class="nav_list_items"><a href="https://#">about</a></li>
-      <li class="nav_list_items"><a href="https://#">Home</a></li>
-      <li class="nav_list_items"><a href="https://#">contact us</a></li>
+    </div>
+    <ul class="nav_list grid col-12 grid-center">
+      <li class="nav_list_items active"><a href="/">home</a></li>
+      <li class="nav_list_items"><a href="/menu.html">menu</a></li>
+      <li class="logo"><a href="/"></a></li>
+      <li class="nav_list_items"><a href="/about.html">about</a></li>
+      <li class="nav_list_items"><a href="/contact.html">contact</a></li>
     </ul>
-    
-    
   </header>
   <nav class="mobile_nav">
     <ul class="nav_list_mobile">
-      <li class="nav_list_items active"><a href="https://#">home</a></li>
-      <li class="nav_list_items"><a href="https://#">about</a></li>
-      <li class="nav_list_items"><a href="https://#">Home</a></li>
-      <li class="nav_list_items"><a href="https://#">contact us</a></li>
+      <li class="nav_list_items active"><a href="/">home</a></li>
+      <li class="nav_list_items"><a href="/menu.html">menu</a></li>
+      <li class="nav_list_items"><a href="/about.html">about</a></li>
+      <li class="nav_list_items"><a href="/contact.html">contact</a></li>
     </ul>
   </nav>
-  <section class="main_content">
-    <p>Hello world!</p>
+  <section id="hero" class="hero_section">
+    <div class="overlay"></div>
+    <div class="hero_inner">
+        <h1 class="heading">Pizza Kitchen</h1>
+        <h4 class="sub_heading">Italy's taste. Fresh out of the oven.</h4>
+    </div>
+    <!--
+    <video autoplay muted loop id="hero_vid" loading="lazy" onclick="playPause()">
+      <source src="/contents/vids/1.mp4" type="video/mp4">
+    </video>
+  -->
   </section>
-  <section class="contact_us">
-    <form action="#" class="form">
-
+  <section id="main" class="main_section grid col">
+    <div class="col-6"><p>Hello world!</p></div>
+    <div class="col-6"><p>Hello world!</p></div>
+    
+  </section>
+  <section class="contact_us grid col">
+    <div class="col-6">
+      <form action="#" class="contact_form">
       <div class="input-group">
-        <label for="name" class="label">Name</label>
-        <input id="name" placeholder="webcrunch" type="text" class="input" onblur="validateName()">
+        <label for="name" class="label">Name *</label>
+        <input id="name" placeholder="webcrunch" type="text" class="input" onkeyup="validateName()" required>
         <span class="error-message"></span>
         <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -63,8 +75,8 @@
       </div>
   
       <div class="input-group">
-        <label for="email" class="label">Email</label>
-        <input id="email" type="email" class="input" autocomplete placeholder="andy@web-crunch.com" onblur="validateEmail()">
+        <label for="email" class="label">Email *</label>
+        <input id="email" type="email" class="input" autocomplete placeholder="andy@web-crunch.com" onkeyup="validateEmail()" required>
         <span class="error-message"></span>
         <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -76,8 +88,8 @@
       </div>
   
       <div class="input-group">
-        <label for="message" class="label">Message</label>
-        <textarea id="message" placeholder="your message" class="input" rows="6" style="resize:vertical" onblur="validateTextArea()"></textarea>
+        <label for="message" class="label">Message *</label>
+        <textarea id="message" placeholder="your message" class="input" rows="6" onkeyup="validateTextArea()" required></textarea>
         <span class="error-message"></span>
         <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
@@ -93,7 +105,9 @@
   
       <input type="submit" class="button" value="Send">
   
-    </form>
+    </form></div>
+    <div class="contact_bg col-6"></p></div>
+    
 
   </section>
 
