@@ -1,9 +1,9 @@
 /* mobile menu */
-var el = document.querySelector('.menu-trigger');
+var mt = document.querySelector('.menu-trigger');
 var nav = document.querySelector('.nav_list_mobile');
 var ham = document.querySelector('#hamburger_menu');
 
-el.onclick = function() {
+mt.onclick = function() {
   nav.classList.toggle('visible');
   ham.classList.toggle('open');
 }
@@ -11,6 +11,12 @@ el.onclick = function() {
 var last_mod = document.querySelector('.last_mod');
 var bom_mod = document.lastModified;
 last_mod.innerHTML = 'last updated or modified : ' + bom_mod;
+/* modal window */
+var modal = document.querySelector('#modal');
+modal.onclick = function (){
+  modal.style.display = 'none';
+  document.body.style.overflowY ='auto';
+}
 
 /*smooth scroll*/
 document
