@@ -1185,6 +1185,7 @@ img.responsive:hover {
   table#food_menu tbody td {
     display: block;
     padding: .6rem;
+    font-size: 1.2rem;
   }
 
   table#food_menu tbody tr td:last-child {
@@ -1197,7 +1198,12 @@ img.responsive:hover {
   }
 
   .menu_item_list h2 {
-    font-size: 1.8rem;
+    font-size: 1.5em;
+    display: block;
+    padding:10px;
+  }
+  .menu_item_list h2 .offer{
+    font-size: 1.5rem;
   }
 
   .menu_item_list {
