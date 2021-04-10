@@ -21,11 +21,14 @@ mt.onclick = function () {
 	ham.classList.toggle('open');
 }
 //close menu when click about menu on mobile
-var aboutM = document.querySelector('.about_m');
-aboutM.onclick = function () {
-	if(ham.className == "menu-trigger open"){
-	nav.classList.toggle('visible');
-	ham.classList.toggle('open');
+
+var subMenu = document.querySelectorAll('.nav_list_mobile li a');
+for (var i = 0; i < subMenu.length; i++) {
+	subMenu[i].onclick = function () {
+		if (ham.className == "menu-trigger open") {
+			nav.classList.toggle('visible');
+			ham.classList.toggle('open');
+		}
 	}
 }
 // active about menu link
@@ -56,7 +59,7 @@ modal.onclick = function () {
 	document.body.style.overflowY = 'auto';
 }
 // open modal with href
-if(location.hash=='#modal'){
+if (location.hash == '#modal') {
 	modal.style.display = 'block';
 	document.body.style.overflowY = 'hidden';
 }

@@ -36,15 +36,19 @@ a {
   text-decoration: none;
   color: #ffd13a;
 }
-a[href*="wiki"]{
+
+a[href*="wiki"] {
   text-decoration: underline;
 }
-#pizza_history a:visited{
+
+#pizza_history a:visited {
   color: black;
 }
-a[href*="menu"]{
+
+a[href*="menu"] {
   text-transform: uppercase;
 }
+
 ul {
   list-style: none;
   padding: 0;
@@ -55,10 +59,12 @@ h1 {
   font-size: 2em;
   font-weight: 900;
 }
+
 h2 {
   font-size: 1.5em;
   font-weight: 900;
 }
+
 video {
   width: 100%;
 }
@@ -111,6 +117,7 @@ video {
 .covid_modal:hover {
   background: #000;
 }
+
 .crp {
   background: #ffd13a;
   cursor: pointer;
@@ -261,6 +268,7 @@ video {
   justify-content: center;
 
 }
+
 #countdown .cta_container {
   padding-top: 50px;
 }
@@ -397,24 +405,35 @@ video {
   background-color: rgba(202, 61, 42, 0.7);
 }
 
-.nav_list .nav_list_items.active,.nav_list .nav_list_items:active {
+.nav_list .nav_list_items.active,
+.nav_list .nav_list_items:active {
   background-color: #D04429
 }
+
 .nav_list .nav_list_items ul {
   display: none;
   background-color: #333;
-  
+
 }
 
-.nav_list_items:hover ul {display: block;}
+.nav_list_items:hover ul {
+  display: block;
+}
+
 .nav_list .nav_list_items ul li {
   display: block;
   margin-top: 25px;
   padding: 10px 0;
   font-size: 80%;
 }
-.nav_list .nav_list_items ul li:first-child{padding-top: 30px;}
-.nav_list .nav_list_items ul li:last-child{padding-bottom: 30px;}
+
+.nav_list .nav_list_items ul li:first-child {
+  padding-top: 30px;
+}
+
+.nav_list .nav_list_items ul li:last-child {
+  padding-bottom: 30px;
+}
 
 /* mobile menu*/
 .mobile_nav {
@@ -546,7 +565,7 @@ span.line {
 }
 
 .promotions .card {
-  background-color:white
+  background-color: white
 }
 
 .card {
@@ -751,7 +770,8 @@ address {
   -moz-transform: scale(1.2);
   -o-transform: scale(1.2);
 }
-footer .cta_container{
+
+footer .cta_container {
   text-align: left;
   padding: 20px 0;
 }
@@ -789,6 +809,7 @@ footer .cta_container{
 .bottom_spacer {
   grid-area: bottom_spacer;
 }
+
 /* Form style*/
 
 #contact .gap {
@@ -890,6 +911,7 @@ textarea:focus {
   margin-bottom: 2rem;
   position: relative;
 }
+
 textarea {
   resize: vertical;
   width: 60%;
@@ -920,24 +942,27 @@ textarea {
 
 #gallery h2 {
   font-size: 3rem;
-  padding-bottom:50px ;
+  padding-bottom: 50px;
 }
+
 img.responsive {
-max-width: 90%;
-opacity: 0.8;
--webkit-transition: .4s ease-in-out;
--moz-transition: .4s ease-in-out;
--ms-transition: .4s ease-in-out;
--o-transition: .4s ease-in-out;
-transition: .4s ease-in-out;
+  max-width: 90%;
+  opacity: 0.8;
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+  -ms-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
 
 }
-img.responsive:hover{
+
+img.responsive:hover {
   transform: rotate(10deg);
   transform: scale(1.1);
   opacity: 1;
 }
-#gallery img{
+
+#gallery img {
   padding: 20px 0;
 }
 
@@ -1014,7 +1039,8 @@ img.responsive:hover{
   flex-basis: 100%;
   max-width: 100%
 }
-.text-center{
+
+.text-center {
   text-align: center;
 }
 
@@ -1024,6 +1050,7 @@ img.responsive:hover{
     flex: 100%;
     max-width: 100%
   }
+
   .col-lg-6 {
     -ms-flex-preferred-size: 50%;
     -webkit-flex-basis: 50%;
@@ -1063,12 +1090,22 @@ img.responsive:hover{
     left: 10px;
     top: 13px;
   }
+
   .card {
     margin: 20px auto;
   }
-  ul.sub_menu{margin: 20px 0;background-color: #111;padding: 10px 0;}
-  ul.sub_menu li{padding: 5px;}
+
+  ul.sub_menu {
+    margin: 20px 0;
+    background-color: #111;
+    padding: 10px 0;
+  }
+
+  ul.sub_menu li {
+    padding: 5px;
+  }
 }
+
 @media only screen and (max-width: 768px) {
   .col-md {
     flex: 100%;
@@ -1082,8 +1119,16 @@ img.responsive:hover{
   .card {
     margin: 20px auto;
   }
-  ul.sub_menu{margin: 20px 0;background-color: #111;padding: 10px 0;}
-ul.sub_menu li{padding: 5px;}
+
+  ul.sub_menu {
+    margin: 20px 0;
+    background-color: #111;
+    padding: 10px 0;
+  }
+
+  ul.sub_menu li {
+    padding: 5px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1091,6 +1136,7 @@ ul.sub_menu li{padding: 5px;}
     flex: 100%;
     max-width: 100%
   }
+
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -1101,37 +1147,47 @@ ul.sub_menu li{padding: 5px;}
       "contact contact";
     align-items: center;
   }
+
   .modal_contnet {
     padding: 40px;
     width: 70%;
   }
+
   .covid_modal {
     padding: 10px;
     font-size: 1rem;
   }
+
   .contact_side {
     height: 0px;
   }
+
   table#food_menu {
     width: 100%;
   }
+
   table#food_menu caption {
     background-image: none;
   }
+
   table#food_menu thead {
     display: none;
   }
+
   table#food_menu tbody td {
     display: block;
     padding: .6rem;
   }
+
   table#food_menu tbody tr td:last-child {
     background: #666;
     color: #fff;
   }
+
   table#food_menu tbody td:before {
     display: inline-block;
   }
+
   .menu_item_list h2 {
     font-size: 1.8rem;
   }
@@ -1153,60 +1209,79 @@ ul.sub_menu li{padding: 5px;}
     border: 10px solid #ffb983;
   }
 
+  .hero_section .hero_inner {
+    padding: 50px 10px;
+    width: 80%;
+    background-color: #fcD7bA;
+    color: #0e191a;
+    font-size: 80%;
+  }
+
   .header_inner h1 {
     font-size: 2.25rem;
   }
-    .promotions {
-      padding: 10px;
-    }
 
-    .card {
-      margin: 20px auto;
-    }
-    footer {
-      text-align: center;
-    }
+  .promotions {
+    padding: 10px;
+  }
 
-    audio {
-      display: block;
-      padding: 20px 0;
-      width: 90%;
-      margin: 0 auto;
-    }
-    .contact_form{
-      padding: 50px 0;
-    }
-    
-.cta_container .cta {
-  display: block;
-  text-align: center;
+  .card {
+    margin: 20px auto;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  audio {
+    display: block;
+    padding: 20px 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contact_form {
+    padding: 50px 0;
+  }
+
+  .cta_container .cta {
+    display: block;
+    text-align: center;
+  }
+
+  ul.sub_menu {
+    margin: 20px 0;
+    background-color: #111;
+    padding: 10px 0;
+  }
+
+  ul.sub_menu li {
+    padding: 5px;
+  }
 }
-ul.sub_menu{margin: 20px 0;background-color: #111;padding: 10px 0;}
-ul.sub_menu li{padding: 5px;}
+
+
+
+
+
+
+/*animation*/
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
 
+  to {
+    opacity: 1;
+  }
+}
 
-
-
-
-
-  /*animation*/
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
+@keyframes fade-out {
+  from {
+    opacity: 1;
   }
 
-  @keyframes fade-out {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
-    }
+  to {
+    opacity: 0;
   }
+}
