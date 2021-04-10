@@ -1,21 +1,16 @@
-window.addEventListener('load', (event) => {
-	console.log('Page is fully loaded!');
-  });
-//get author name from meta
-document.querySelector('.designer_name').innerText = document.querySelector('meta[name="author"]').content;
-// active about menu link
-var activeMenu = document.querySelector('.active'),
-	aboutMenu = document.querySelector('.about'),
-	isHome = false;
+//check if its homepage
+var isHome = false;
 if (document.getElementById('home')) {
 	isHome = true;
 } else {
 	isHome = false
 }
-if (location.hash == '#about' && isHome) {
-	activeMenu.classList.remove('active');
-	aboutMenu.classList.add('active')
-}
+// emulating events using event handlers
+window.addEventListener('load', (event) => {
+	console.log('Page is fully loaded!');
+});
+//get author name from meta
+document.querySelector('.designer_name').innerText = document.querySelector('meta[name="author"]').content;
 //mobile menu
 var mt = document.querySelector('.menu-trigger'),
 	nav = document.querySelector('.nav_list_mobile'),
@@ -25,6 +20,26 @@ mt.onclick = function () {
 	nav.classList.toggle('visible');
 	ham.classList.toggle('open');
 }
+//close menu when click about menu on mobile
+var aboutM = document.querySelector('.about_m');
+aboutM.onclick = function () {
+	if(ham.className == "menu-trigger open"){
+	nav.classList.toggle('visible');
+	ham.classList.toggle('open');
+	}
+}
+// active about menu link
+var activeMenu = document.querySelector('.active'),
+	aboutMenu = document.querySelector('.about');
+aboutMenu.onclick = function () {
+	activeMenu.classList.remove('active');
+	aboutMenu.classList.add('active');
+}
+if (location.hash == '#about' && isHome) {
+	activeMenu.classList.remove('active');
+	aboutMenu.classList.add('active')
+}
+
 //footer BOM get last modified
 var last_mod = document.querySelector('.last_mod'),
 	bom_mod = document.lastModified;
@@ -39,6 +54,11 @@ cButton.onclick = function () {
 modal.onclick = function () {
 	modal.style.display = 'none';
 	document.body.style.overflowY = 'auto';
+}
+// open modal with href
+if(location.hash=='#modal'){
+	modal.style.display = 'block';
+	document.body.style.overflowY = 'hidden';
 }
 
 // form validation
@@ -104,7 +124,7 @@ function setStatus(field, message, status) {
 		field.classList.add('input-error');
 		field.classList.remove('input-success');
 	}
-	if (vName && vEmail && vMessage){
+	if (vName && vEmail && vMessage) {
 		alert('All enteries are validated')
 	}
 }
@@ -115,26 +135,28 @@ function setStatus(field, message, status) {
 // Predefined date for next branch openning
 var dDate = new Date("Nov 9, 2021 8:30:00").getTime();
 var countdownDiv = document.querySelector(".countdown");
-var x = setInterval(function () {
-	// Get the number of milliseconds since midnight, January 1, 1970. 
-	var dNow = new Date().getTime();
-	// Calculate date difference
-	var diff = dDate - dNow;
-	// Calculations for days, hours, minutes and seconds
-	var cSeconds = 1000;
-	var cMinutes = 1000 * 60;
-	var cHours = cMinutes * 60;
-	var cDays = cHours * 24;
-	var daysLeft = Math.round(diff / cDays);
-	var hoursLeft = Math.round((diff % cDays) / cHours);
-	var minutesLeft = Math.round((diff % cHours) / cMinutes);
-	var secondsLeft = Math.round((diff % cMinutes) / cSeconds);
+if (isHome) {
+	var x = setInterval(function () {
+		// Get the number of milliseconds since midnight, January 1, 1970. 
+		var dNow = new Date().getTime();
+		// Calculate date difference
+		var diff = dDate - dNow;
+		// Calculations for days, hours, minutes and seconds
+		var cSeconds = 1000;
+		var cMinutes = 1000 * 60;
+		var cHours = cMinutes * 60;
+		var cDays = cHours * 24;
+		var daysLeft = Math.round(diff / cDays);
+		var hoursLeft = Math.round((diff % cDays) / cHours);
+		var minutesLeft = Math.round((diff % cHours) / cMinutes);
+		var secondsLeft = Math.round((diff % cMinutes) / cSeconds);
 
-	// Output the result in an element with id="demo"
-	countdownDiv.innerHTML = "<h2>Time Left To Our Next Branch Openning</h2><span class='days'>" + daysLeft + "</span><span class='hours'>" + hoursLeft + "</span><span class='minutes'>" + minutesLeft + "</span><span class='seconds'>" + secondsLeft + "</span>";
+		// Output the result in an element with id="demo"
+		countdownDiv.innerHTML = "<h2>Time Left To Our Next Branch Openning</h2><span class='days'>" + daysLeft + "</span><span class='hours'>" + hoursLeft + "</span><span class='minutes'>" + minutesLeft + "</span><span class='seconds'>" + secondsLeft + "</span>";
 
-	// If the count down is over, write some text 
-	if (diff < 0) {
+		// If the count down is over, write some text 
+		if (diff < 0) {
 
-	}
-}, 1000);
+		}
+	}, 1000)
+};
