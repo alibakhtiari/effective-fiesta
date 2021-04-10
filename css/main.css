@@ -126,6 +126,7 @@ video {
   -ms-transition: background-color .4s ease-in-out;
   -o-transition: background-color .4s ease-in-out;
   transition: background-color .4s ease-in-out;
+  z-index: 9999;
 }
 
 .covid_modal:hover {
