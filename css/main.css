@@ -794,8 +794,8 @@ audio{
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background: #D04429;
-  fill: white;
+  background: #ffd13a;
+  fill: #222;
   padding: 10px;
   border-radius: 100%;
   -webkit-transition: .3s ease-in-out;
@@ -803,10 +803,7 @@ audio{
   -ms-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
-}
-.scroll-top:hover{
-  background: #ffd13a;
-  fill: #222;
+  z-index: 1;
 }
 .scroll-top svg{
   width: 40px;
