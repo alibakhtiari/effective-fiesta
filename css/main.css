@@ -673,13 +673,13 @@ a.cta:hover,
 
 table#food_menu {
   margin: 0 auto;
-  font-family: 'Amatic SC', sans-serif;
+  font-family: 'Candal', sans-serif;
   border-radius: 5px;
   width: 80%;
 }
 
 table#food_menu caption {
-  font-size: 5rem;
+  font-size: 3rem;
   color: #222222;
   margin: 1rem;
   font-weight: 900;
@@ -689,8 +689,8 @@ table#food_menu thead th {
   text-align: left;
   background: #333;
   color: #eee;
-  padding: .8rem;
-  font-size: 1.8rem;
+  padding: 1.2rem;
+  font-size: 2rem;
 
 }
 
@@ -712,6 +712,11 @@ table#food_menu tbody tr:not(:last-child) {
 
 .menu_item_list h2 {
   margin: 10px;
+  font-size: 1.8rem;
+}
+.menu_item_list h2 .offer {
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
 .menu_item_list .offer {
@@ -723,6 +728,7 @@ table#food_menu tbody tr:not(:last-child) {
 
 .menu_price {
   min-width: 75px;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -731,8 +737,10 @@ table#food_menu tbody tr:not(:last-child) {
   font-weight: 900;
 }
 
-.menu_ing#D04429ients {
+span.menu_ingredients {
   font-weight: 400;
+  font-size: 1.6rem;
+  font-family: 'Molengo', sans-serif;
 }
 
 

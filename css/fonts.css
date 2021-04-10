@@ -33,23 +33,4 @@
     font-style: normal;
     font-display: swap;
 }
-@font-face {
-    font-family: 'Amatic SC';
-    src: url('webfonts/AmaticSC-Bold.woff2') format('woff2'),
-        url('webfonts/AmaticSC-Bold.woff') format('woff'),
-        url('webfonts/AmaticSC-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Amatic SC';
-    src: url('webfonts/AmaticSC-Regular.woff2') format('woff2'),
-        url('webfonts/AmaticSC-Regular.woff') format('woff'),
-        url('webfonts/AmaticSC-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
