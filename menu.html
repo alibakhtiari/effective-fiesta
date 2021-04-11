@@ -49,6 +49,7 @@
     </div>
   <section class="restaurent_menu s-padd">
     <div class="pizza_menu">
+      <!-- This fulfills requirement 2.4.4-->
     <table id="food_menu">
         <caption>Pizzas</caption>
         <thead>
@@ -82,6 +83,7 @@
       </table>
     </div>
     <div class="drink_menu">
+    <!-- This fulfills requirement 2.4.4-->
       <table id="food_menu">
           <caption>Drinks</caption>
           <thead>
@@ -129,6 +131,73 @@
       <hr>
       <h2>CURBSIDE PICKUP AVAILABLE</h2>
       <p>Curbside pickup is available for guests who do not want to leave their car for pickup. Call the store once you have arrived, and we will bring the order out to you.</p>
+    </div>
+    
+  </div>
+  <div class="modal" id="modal_order">
+    <div class="modal_contnet">
+      <a class="order_close">x</a>
+      <form class="onlineoderform flex col col-sm col-md">
+        <div class="flex col col-6 col-sm col-md col- lg">
+        <h2>Pizza type</h2>
+        <div class="pizza_name col flex col-12">
+          <input id="pizza-pmeatza"  name="pizza-type" type="radio" value="Pepperoni Meatza" onclick="hideOp()" class="pizza-type">
+          <label for="pizza-pmeatza"><strong>Pepperoni Meatza</strong></label>
+        </div>
+        <div class="pizza_name col flex col-12">
+          <input id="pizza-bcheese" name="pizza-type" type="radio" value="Blue cheese"  onclick="hideOp()" class="pizza-type">
+          <label for="pizza-bcheese"><strong>Blue Cheese, Walnut, and Pear Pizza</strong></label>
+        </div>
+        <div class="pizza_name col flex col-12">
+          <input id="pizza-cpepperoni" name="pizza-type" type="radio" value="Campfire Pepperoni" onclick="hideOp()" class="pizza-type">
+          <label for="pizza-cpepperoni"><strong>Campfire Pepperoni Pizza</strong></label>
+        </div>
+        <div class="pizza_name col flex col-12">
+          <input id="pizza-barbeque" name="pizza-type" type="radio" value="barbeque" onclick="hideOp()" class="pizza-type">
+          <label for="pizza-barbeque"><strong>Barbeque Chicken Grilled Pizza</strong></label>
+        </div>
+        <div class="pizza_name col flex col-12">
+          <input id="pizza-mediterranean" name="pizza-type" type="radio" value="Mediterranean" onclick="hideOp()" class="pizza-type">
+          <label for="pizza-mediterranean"><strong>Mediterranean Pesto Pizza</strong></label>
+        </div>
+        <div class="pizza_name custom_option col flex col-12">
+          <input id="type-custom" name="pizza-type" type="radio" value="custom"  onclick="showOp()" class="pizza-type">
+          <label for="type-custom"><strong>Custom</strong> (design your own!)</label>
+        </div>
+        <div class="col flex col-12">
+          <label  class="label select_label" for="pizza-size"><strong>Size</strong></label>
+          <select class="select" name="pizza-size">
+            <option value="s">Small</option>
+            <option value="m">Medium</option>
+            <option value="l" selected>Large</option>
+            <option value="xl">Extra large</option>
+          </select>
+        </div>
+      </div>
+        <div class="flex col col-6 col-sm col-md col- lg">
+        <div  class="col flex col-12 topping" style="display: none;">
+          <h2>Toppings</h2>
+    
+          <div class="col flex col-12">
+            <input id="topping-cheese" name="cheese" type="checkbox" value="cheese" checked>
+            <label for="topping-cheese"><strong>Cheese</strong></label>
+          </div>
+          <div class="col flex col-12">
+            <input id="topping-beef" name="topping" type="checkbox" value="beef" checked>
+            <label for="topping-beef"><strong>Ground beef</strong></label>
+          </div>
+          <div class="col flex col-12">
+            <input id="topping-spinach" name="topping" type="checkbox" value="spinach" checked>
+            <label for="topping-spinach"><strong>Fresh spinach</strong></label>
+          </div>
+          <div class="col flex col-12">
+            <input id="topping-peppers" name="topping" type="checkbox" value="peppers">
+            <label for="topping-peppers"><strong>Grilled peppers</strong></label>
+          </div>
+        </div>
+      </div>
+        <input type="submit" class="button" value="Place Order" disabled>
+      </form>
     </div>
     
   </div>

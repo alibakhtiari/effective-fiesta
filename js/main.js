@@ -11,6 +11,17 @@ window.addEventListener('load', (event) => {
 });
 //get author name from meta
 document.querySelector('.designer_name').innerText = document.querySelector('meta[name="author"]').content;
+// order
+var topping = document.querySelector('.topping');
+function showOp () {
+	topping.style.display = 'block';
+}
+function hideOp () {
+	topping.style.display = 'none';
+}
+
+
+
 //go to top 
 document.addEventListener("scroll", handleScroll);
 var scrollToTopBtn = document.querySelector(".scroll-top");

@@ -95,11 +95,11 @@ video {
   background: #D04429;
   cursor: pointer;
   color: white;
-  padding: 15px;
-  font-size: 1.4rem;
+  padding: 12px;
+  font-size: 1.2rem;
   position: fixed;
   right: 0;
-  top: 50%;
+  top: 40%;
   border-radius: 5px 5px 0px 0px;
   transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -114,16 +114,13 @@ video {
   transition: background-color .4s ease-in-out;
 }
 
-.covid_modal:hover {
-  background: #000;
-}
-
 .crp {
   background: #ffd13a;
   cursor: pointer;
   color: #222;
-  padding: 15px;
-  font-size: 1.4rem;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1.2rem;
   position: fixed;
   left: 10px;
   bottom: 10px;
@@ -135,9 +132,9 @@ video {
   transition: background-color .4s ease-in-out;
   z-index: 9999;
 }
-
-.covid_modal:hover {
-  background: #000;
+.covid_modal:hover,.crp:hover{
+  color: #fff;
+  background: #222;
 }
 
 .modal_contnet {
@@ -172,14 +169,14 @@ video {
 .hero_section .overlay {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   background-color: hsl(0, 0%, 0%);
   opacity: 0.4;
 }
 
 .hero_section {
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   background-image: url(../contents/img/shourav-sheikh-a66sGfOnnqQ-unsplash.jpg);
   background-position: center center;
   background-size: cover;
@@ -322,25 +319,20 @@ video {
 
 .main_header .cta {
   position: absolute;
-  right: 15px;
-  top: 8px;
+  right: 10px;
+  top: 14px;
   text-transform: uppercase;
   font-weight: 900;
-  padding: 15px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #ffd13a;
-  color: #333;
-  font-size: 1.25rem;
+  color: #222;
   -webkit-transition: .3s ease-in-out;
   -moz-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
 
-.main_header .cta:hover {
-  background-color: #D04429;
-  color: #fff;
-}
 
 .logo {
   position: relative;
@@ -390,7 +382,7 @@ video {
   text-align: center;
   padding: 25px 0;
   height: 20px;
-  min-width: 170px;
+  min-width: 200px;
   transition: .4s ease-in-out;
   -webkit-transition: .4s ease-in-out;
   -moz-transition: .2s ease-in-out;
@@ -414,26 +406,26 @@ video {
 .nav_list .nav_list_items ul {
   display: none;
   background-color: #333;
-
 }
 
 .nav_list_items:hover ul {
   display: block;
 }
 
-.nav_list .nav_list_items ul li {
-  display: block;
+.nav_list .nav_list_items ul li:first-child{
   margin-top: 25px;
-  padding: 10px 0;
-  font-size: 80%;
 }
-
-.nav_list .nav_list_items ul li:first-child {
-  padding-top: 30px;
+.nav_list .nav_list_items ul li a{
+  font-size: 1rem;
+  padding: 15px 0;
+  display: block;
 }
-
-.nav_list .nav_list_items ul li:last-child {
-  padding-bottom: 30px;
+.nav_list .nav_list_items ul li:hover{
+  background-color: #ffd13a;
+  
+}
+.nav_list .nav_list_items ul li:hover a{
+  color: #222;
 }
 
 /* mobile menu*/
@@ -631,6 +623,9 @@ span.line {
 #pizza_history .cta_container {
   padding: 50px 0;
 }
+#pizza_history .cta_container .cta {
+  padding:20px;
+}
 
 #fig_element {
   text-align: center;
@@ -650,11 +645,11 @@ span.line {
 .cta {
   text-transform: uppercase;
   font-weight: 900;
-  padding: 15px;
+  padding: 10px;
   border-radius: 5px;
   background-color: #ffd13a;
   color: #333;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   -webkit-transition: .3s ease-in-out;
   -moz-transition: .3s ease-in-out;
   -o-transition: .3s ease-in-out;
@@ -666,9 +661,6 @@ a.cta:hover,
   background-color: #D04429;
   color: #fff;
 }
-
-
-
 
 /* things about tables */
 
@@ -792,11 +784,11 @@ audio{
 .scroll-top{
   display: none;
   position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background: #ffd13a;
-  fill: #222;
-  padding: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #D04429;
+  fill: #fff;
+  padding: 4px;
   border-radius: 100%;
   -webkit-transition: .3s ease-in-out;
   -moz-transition: .3s ease-in-out;
@@ -806,9 +798,26 @@ audio{
   z-index: 1;
 }
 .scroll-top svg{
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
 }
+
+
+.select {
+  min-width: 30%;
+  max-width: 50%;
+  border: 1px solid #333;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  margin-left: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+}
+.onlineoderform {margin: 0 auto;}
+optgroup {font-size: 1rem;}
+.topping div,.pizza_name {padding-bottom: 10px;}
 
 /*CSS Grid*/
 .grid-container {
