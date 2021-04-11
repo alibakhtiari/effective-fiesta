@@ -74,7 +74,8 @@ video {
 }
 
 /*modal window*/
-#modal,#modal_order {
+#modal,
+#modal_order {
   position: fixed;
   display: none;
   top: 0;
@@ -132,7 +133,9 @@ video {
   transition: background-color .4s ease-in-out;
   z-index: 9999;
 }
-.covid_modal:hover,.crp:hover{
+
+.covid_modal:hover,
+.crp:hover {
   color: #fff;
   background: #222;
 }
@@ -153,7 +156,8 @@ video {
   animation-duration: 1.5s;
 }
 
-.close_button,.order_close {
+.close_button,
+.order_close {
   color: #fff;
   font-size: 1.2rem;
   line-height: 20px;
@@ -412,19 +416,22 @@ video {
   display: block;
 }
 
-.nav_list .nav_list_items ul li:first-child{
+.nav_list .nav_list_items ul li:first-child {
   margin-top: 25px;
 }
-.nav_list .nav_list_items ul li a{
+
+.nav_list .nav_list_items ul li a {
   font-size: 1rem;
   padding: 15px 0;
   display: block;
 }
-.nav_list .nav_list_items ul li:hover{
+
+.nav_list .nav_list_items ul li:hover {
   background-color: #ffd13a;
-  
+
 }
-.nav_list .nav_list_items ul li:hover a{
+
+.nav_list .nav_list_items ul li:hover a {
   color: #222;
 }
 
@@ -623,8 +630,9 @@ span.line {
 #pizza_history .cta_container {
   padding: 50px 0;
 }
+
 #pizza_history .cta_container .cta {
-  padding:20px;
+  padding: 20px;
 }
 
 #fig_element {
@@ -707,6 +715,7 @@ table#food_menu tbody tr:not(:last-child) {
   margin: 10px;
   font-size: 1.8rem;
 }
+
 .menu_item_list h2 .offer {
   font-size: 2rem;
   letter-spacing: 1px;
@@ -776,12 +785,14 @@ footer .cta_container {
   text-align: left;
   padding: 20px 0;
 }
-audio{
+
+audio {
   width: 40%;
-  margin:  auto;
+  margin: auto;
   padding: 20px
 }
-.scroll-top{
+
+.scroll-top {
   display: none;
   position: fixed;
   right: 10px;
@@ -797,7 +808,8 @@ audio{
   transition: .3s ease-in-out;
   z-index: 1;
 }
-.scroll-top svg{
+
+.scroll-top svg {
   width: 32px;
   height: 32px;
 }
@@ -815,9 +827,19 @@ audio{
   line-height: 1.1;
   background-color: #fff;
 }
-.onlineoderform {margin: 0 auto;}
-optgroup {font-size: 1rem;}
-.topping div,.pizza_name {padding-bottom: 10px;}
+
+.onlineoderform {
+  margin: 0 auto;
+}
+
+optgroup {
+  font-size: 1rem;
+}
+
+.topping div,
+.pizza_name {
+  padding-bottom: 10px;
+}
 
 /*CSS Grid*/
 .grid-container {
@@ -1236,9 +1258,10 @@ img.responsive:hover {
   .menu_item_list h2 {
     font-size: 1.5em;
     display: block;
-    padding:10px;
+    padding: 10px;
   }
-  .menu_item_list h2 .offer{
+
+  .menu_item_list h2 .offer {
     font-size: 1.5rem;
   }
 
