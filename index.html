@@ -100,9 +100,7 @@
 <section id="about" class="flex col s-padd">
     <div class="col-6 col-sm">
       <h2>Pizza Kitchen</h2>
-      <p>Pizza Kitchen was born on 01 april 2021 with Amin Mohebifar at the head.<br>
-         In recent years, thanks to their meticulous choice of quality products and a particular and refined dough, they have managed to create a light and digestible pizza as well as tasty and delicious.<br>
-         Pizza Kitchen's Pizza is a pizzeria located in Kamloops (BC), which invites you to taste the goodness of all the varieties of pizzas and bruschetta proposed, freshly baked and served in the small room.</p>
+      <p>Pizza Kitchen was established on April 10, 2021 straight out of Amin Mohebifar’s home kitchen. In recent years, thanks to our meticulous choice of quality products and a particular and refined dough, we have managed to create a light and digestible pizza with flavors that explode in your mouth.<br>Pizza Kitchen's Pizza is a pizzeria located in Kamloops (BC). We invite you to taste the goodness of our specialty pizzas and bruschetta, all of which are freshly baked and served with love.</p>
 
     </div>
     <div class="about_bg col-6 col-sm">
@@ -143,7 +141,9 @@
     </section>
 
 
-<a href="index.html#modal" class="covid_modal">Covid-19 Updates</a>
+    <a href="#top" class="scroll-top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a>
+    <a href="index.html#modal" class="covid_modal">Covid-19 Updates</a>
 <a href="crp.html" class="crp">Cross Reference Page</a>  
 <div class="modal" id="modal">
   <div class="modal_contnet">
@@ -157,6 +157,61 @@
   </div>
   
 </div>
+<div class="modal" id="modal_order">
+  <div class="modal_contnet">
+    <a class="order_close">x</a>
+    <h1>Covid-19 Updates</h1>
+    <form action="#" class="contact_form">
+      <!-- This fulfills requirement 2.4.7 c)-->
+      <div class="input-group col flex col-12">
+        <label for="name" class="label col-3 col-sm col-md col-lg">Name *</label>
+        <!-- This fulfills requirement 2.4.6 c) and 2.4.6 e)-->
+        <input id="name" placeholder="your name here" type="text" class="input col-9 col-sm col-md col-lg" onkeyup="validateName()" required>
+        <span class="error-message"></span>
+        <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+  
+        <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+        </svg>
+      </div>
+  
+      <div class="input-group col flex col-12">
+        <label for="email" class="label col-3 col-sm col-md col-lg">Email *</label>
+        <input id="email" type="email" class="input col-9 col-sm col-md col-lg" placeholder="mail@mail.com" onkeyup="validateEmail()" required>
+        <span class="error-message"></span>
+        <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+  
+        <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+        </svg>
+      </div>
+  
+      <div class="input-group col flex col-12">
+        <label for="message" class="label col-3 col-sm col-md col-lg">Message *</label>
+        <textarea id="message" placeholder="type your message here" class="input col-9 col-sm col-md col-lg" rows="6" onkeyup="validateTextArea()" required></textarea>
+        <span class="error-message"></span>
+        <svg class="icon icon-success hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+        </svg>
+  
+        <svg class="icon icon-error hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" >
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+        </svg>
+      </div>
+  
+  
+    
+  
+      <input type="submit" class="button" value="Send">
+  
+    </form>
+  </div>
+  
+</div>
 
 
   <footer class="flex col" id="footer">
@@ -164,8 +219,16 @@
       <h2> About Designer:</h2>
       <address>
         Designed by <a class="designer_name" href="mailto:mohebifara18@mytru.ca"></a><br>
-        You may also want to visit me: 805 TRU Way,<br> Kamloops, BC V2C 0C8, <br>Canada
+        You may also want to visit me: 688 Laurier Dr,<br> Kamloops,BC, V1S 1c9, <br>Canada
       </address>
+      <p>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="https://jigsaw.w3.org/css-validator/images/vcss"
+                alt="Valid CSS!" />
+        </a>
+    </p>
+        
     </div>
     <div  class="col-4 col-sm">
       <h2> Credits:</h2>

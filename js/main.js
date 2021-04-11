@@ -11,6 +11,26 @@ window.addEventListener('load', (event) => {
 });
 //get author name from meta
 document.querySelector('.designer_name').innerText = document.querySelector('meta[name="author"]').content;
+//go to top 
+document.addEventListener("scroll", handleScroll);
+var scrollToTopBtn = document.querySelector(".scroll-top");
+function handleScroll() {
+  var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  if ((document.documentElement.scrollTop / scrollableHeight ) > 0.1) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
 //mobile menu
 var mt = document.querySelector('.menu-trigger'),
 	nav = document.querySelector('.nav_list_mobile'),
@@ -49,15 +69,29 @@ var last_mod = document.querySelector('.last_mod'),
 last_mod.innerHTML = 'last updated or modified : ' + bom_mod;
 // modal window
 var cButton = document.querySelector('.covid_modal'),
-	modal = document.querySelector('#modal');
+	modal = document.querySelector('#modal'),
+	oButton = document.querySelector('.main_header .cta'),
+	orderInner = document.querySelector('.modal_contnet'),
+	cClose = document.querySelector('.order_close'),
+	orderModal = document.querySelector('#modal_order');
 cButton.onclick = function () {
 	modal.style.display = 'block';
 	document.body.style.overflowY = 'hidden';
+}
+oButton.onclick = function () {
+	orderModal.style.display = 'block';
+	document.body.style.overflowY = 'hidden';
+	orderIsOpen = true;
 }
 modal.onclick = function () {
 	modal.style.display = 'none';
 	document.body.style.overflowY = 'auto';
 }
+cClose.onclick = function () {
+	orderModal.style.display = 'none';
+	document.body.style.overflowY = 'auto';
+}
+
 // open modal with href
 if (location.hash == '#modal') {
 	modal.style.display = 'block';
