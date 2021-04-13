@@ -671,11 +671,17 @@ span.line {
   -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
-.cta_container.sign_up {
-  padding-top: 50px;
+.cta_container .sign_up {
+  padding: 50px 30px;
+  justify-content: center;
 }
-.cta_container.sign_up .cta {
-  padding: 20px;
+.cta_container .sign_up .cta {
+  padding: 15px;
+  margin: 10px 0;
+}
+.cta_container .sign_up input{
+  min-width: 30%;
+  margin: 10px 0;
 }
 #about .cta_container {
   padding-top: 30px;
@@ -834,31 +840,16 @@ audio {
 }
 
 
-.select {
-  min-width: 30%;
-  max-width: 50%;
-  border: 1px solid #333;
-  border-radius: 0.25em;
-  padding: 0.25em 0.5em;
-  margin-left: 20px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  line-height: 1.1;
-  background-color: #fff;
-}
-
 .onlineoderform {
   margin: 0 auto;
 }
+.onlineoderform h2 {margin: 10px;}
 
 optgroup {
   font-size: 1rem;
 }
 
-.topping div,
-.pizza_name {
-  padding-bottom: 10px;
-}
+
 
 /*CSS Grid*/
 .grid-container {

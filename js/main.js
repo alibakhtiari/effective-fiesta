@@ -14,22 +14,23 @@ document.querySelector('.designer_name').innerText = document.querySelector('met
 //scroll to top 
 document.addEventListener("scroll", handleScroll);
 var scrollToTopBtn = document.querySelector(".scroll-top");
+
 function handleScroll() {
-  var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  if ((document.documentElement.scrollTop / scrollableHeight ) > 0.1) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
+	var scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	if ((document.documentElement.scrollTop / scrollableHeight) > 0.1) {
+		scrollToTopBtn.style.display = "block";
+	} else {
+		scrollToTopBtn.style.display = "none";
+	}
 }
 
 scrollToTopBtn.addEventListener("click", scrollToTop);
 
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth"
+	});
 }
 //mobile menu
 var mt = document.querySelector('.menu-trigger'),
@@ -73,6 +74,7 @@ var cButton = document.querySelector('.covid_modal'),
 	oButton = document.querySelector('.order'),
 	orderInner = document.querySelector('.modal_contnet'),
 	cClose = document.querySelector('.order_close'),
+	placeOrder = document.querySelector('.order_now'),
 	orderModal = document.querySelector('#modal_order');
 cButton.onclick = function () {
 	modal.style.display = 'block';
@@ -82,24 +84,38 @@ oButton.onclick = function () {
 	orderModal.style.display = 'block';
 	document.body.style.overflowY = 'hidden';
 	orderIsOpen = true;
-	// Order Countdown
-var orderTime = new Date().getTime()+1140000;
-var oTimeCointainer = document.querySelector(".order_timer");
-function oTime() {
-	var dNow = new Date().getTime();
-	var diff = orderTime - dNow;
-	var cSeconds = 1000;
-	var cMinutes = 1000 * 60;
-	var cHours = cMinutes * 60;
-	var minutesLeft = Math.round((diff % cHours) / cMinutes);
-	var secondsLeft = Math.round((diff % cMinutes) / cSeconds);
-	oTimeCointainer.innerHTML = minutesLeft + ":" + secondsLeft;
-
-	if (diff < 0) {
-		oTimeCointainer.innerHTML = '<strong>Times Up!</strong>';
-	}
 }
-var oTimer = setInterval(oTime, 1000)
+
+placeOrder.onclick = function () {
+
+	// Order Countdown
+	var orderTime = new Date().getTime() + 1140000;
+	var oTimer = document.querySelector(".order_timer");
+	document.querySelector(".oTimerCointainer").style.display = 'block';
+
+	function oTime() {
+		var dNow = new Date().getTime();
+		var diff = orderTime - dNow;
+		var cSeconds = 1000;
+		var cMinutes = 1000 * 60;
+		var cHours = cMinutes * 60;
+		var minutesLeft = Math.round((diff % cHours) / cMinutes);
+		var secondsLeft = Math.round((diff % cMinutes) / cSeconds);
+		if (secondsLeft>9){
+			oTimer.innerHTML = minutesLeft + ":" + secondsLeft;
+		}
+		else{
+			oTimer.innerHTML = minutesLeft + ":0" + secondsLeft;
+		}
+		
+
+		if (diff < 0) {
+			oTimer.innerHTML = '<strong>Times Up!</strong>';
+		}
+	}
+	var oTimerStart = setInterval(oTime, 1000)
+
+	this.disabled = "true"
 }
 
 
@@ -122,13 +138,13 @@ if (location.hash == '#modal') {
 
 //Order Calculation
 
-	function calcOrder () {
-		var tPrice = document.querySelector('.total_price'),
-			dPrice = parseFloat(document.querySelector('input[name="drinks"]:checked').value),
-			pPrice = parseFloat(document.querySelector('input[name="pizza-type"]:checked').value);
-		tPrice.innerText = dPrice + pPrice;
-	}
-	
+function calcOrder() {
+	var tPrice = document.querySelector('.total_price'),
+		dPrice = parseFloat(document.querySelector('input[name="drinks"]:checked').value),
+		pPrice = parseFloat(document.querySelector('input[name="pizza-type"]:checked').value);
+	tPrice.innerText = dPrice + pPrice;
+}
+
 
 // form validation
 var vName, vEmail, vMessage = false;

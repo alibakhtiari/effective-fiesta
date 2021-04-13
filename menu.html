@@ -110,7 +110,7 @@
         <tbody>
           <tr></tr>
           <td class="menu_item_list">Coca-Cola</td>
-          <td class="menu_price">5 CAD</td>
+          <td class="menu_price">2.5 CAD</td>
           </tr>
           <tr>
             <td class="menu_item_list">Pepsi</td>
@@ -162,14 +162,21 @@
   <div class="modal" id="modal_order">
     <div class="modal_contnet">
       <a class="order_close">x</a>
-      <div class="oTimerCointainer">
-      <p><strong>Time left to order:</strong>
-      <span class="order_timer">20:00</span></p>
+      <div class="oTimerCointainer" style="display: none;">
+        <p><strong>Estimated time:</strong><span class='order_timer'>Calculating</span></p>
     </div>
       <!-- This fulfills requirement 2.4.3-->
       <form class="onlineoderform flex col col-sm col-md">
+        <div class="col flex col-12">
+          <label class="label col-3 col-sm col-md col-lg" for="ordername"><strong>Name * </strong> </label>
+          <input id="ordername" name="ordername" placeholder="your name here" type="text" class="input col-6 col-sm col-md col-lg">
+        </div>
+        <div class="col flex col-12">
+          <label class="label col-3 col-sm col-md col-lg" for="orderaddress"><strong>Address * </strong> </label>
+          <input id="orderaddress" name="orderaddress" placeholder="Type your address here" type="text" class="input col-6 col-sm col-md col-lg">
+        </div>
         <div class="flex col col-6 col-sm col-md col- lg">
-          <h2>Pizza type</h2>
+          <h2>Pizzas</h2>
           <div class="pizza_name col flex col-12">
             <input id="pizza-pmeatza" name="pizza-type" type="radio" value="20" onclick="calcOrder()" checked class="pizza-type">
             <label for="pizza-pmeatza"><strong>Pepperoni Meatza</strong></label>
@@ -200,7 +207,7 @@
             <h2>Drinks</h2>
 
             <div class="col flex col-12">
-              <input id="drinks-cola" name="drinks" type="radio" value="5" onclick="calcOrder()" checked>
+              <input id="drinks-cola" name="drinks" type="radio" value="2.5" onclick="calcOrder()" checked>
               <label for="drinks-cola"><strong>Coca-Cola</strong></label>
             </div>
             <div class="col flex col-12">
@@ -232,8 +239,12 @@
           </div>
           
         </div>
-        <div class="price">Total Price: <span class="total_price">25</span> CAD</div>
-        <input type="submit" class="button order_now" value="Place Order" disabled>
+        <div class="col flex col-12">
+          <label class="label col-sm col-md col-lg" for="Coupon"><strong>Coupon</strong> </label>
+          <input id="Coupon" name="Coupon" placeholder="enter your coupon here" type="text" class="input col-sm col-md col-lg">
+        </div>
+        <div class="price">Total Price: <span class="total_price">22.5</span> CAD</div>
+          <button class="button order_now">Place Order</button>
 
         
       </form>
