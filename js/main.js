@@ -144,6 +144,17 @@ function calcOrder() {
 		pPrice = parseFloat(document.querySelector('input[name="pizza-type"]:checked').value);
 	tPrice.innerText = dPrice + pPrice;
 }
+// delivery
+function deliverType() {
+	var orderAddress = document.querySelector('.orderaddress');
+	if (document.querySelector('input[name="deliver"]:checked').value == 'delivery'){
+		orderAddress.style.display = 'block';
+	}
+	else{
+		orderAddress.style.display = 'none';
+	}
+}
+
 
 
 // form validation

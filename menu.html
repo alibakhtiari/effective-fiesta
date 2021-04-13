@@ -171,7 +171,7 @@
           <label class="label col-3 col-sm col-md col-lg" for="ordername"><strong>Name * </strong> </label>
           <input id="ordername" name="ordername" placeholder="your name here" type="text" class="input col-6 col-sm col-md col-lg">
         </div>
-        <div class="col flex col-12">
+        <div class="orderaddress col flex col-12" style="display: none;">
           <label class="label col-3 col-sm col-md col-lg" for="orderaddress"><strong>Address * </strong> </label>
           <input id="orderaddress" name="orderaddress" placeholder="Type your address here" type="text" class="input col-6 col-sm col-md col-lg">
         </div>
@@ -229,11 +229,11 @@
             <div class="col flex col-12">
             <h2>Delivery Method</h2></div>
             <div class="col flex col-6">
-              <input id="carry" name="deliver" type="radio" value="carry">
+              <input id="carry" name="deliver" type="radio" value="carry" onclick="deliverType()" checked> 
               <label for="carry"><strong>Carry out</strong></label>
             </div>
             <div class="col flex col-6">
-              <input id="delivery" name="deliver" type="radio" value="delivery">
+              <input id="delivery" name="deliver" type="radio" value="delivery" onclick="deliverType()">
               <label for="delivery"><strong>Delivery</strong></label>
             </div>
           </div>
@@ -244,7 +244,7 @@
           <input id="Coupon" name="Coupon" placeholder="enter your coupon here" type="text" class="input col-sm col-md col-lg">
         </div>
         <div class="price">Total Price: <span class="total_price">22.5</span> CAD</div>
-          <button class="button order_now">Place Order</button>
+        <button class="button order_now">Place Order</button>
 
         
       </form>
