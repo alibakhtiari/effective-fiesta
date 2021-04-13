@@ -148,7 +148,7 @@ function calcOrder() {
 function deliverType() {
 	var orderAddress = document.querySelector('.orderaddress');
 	if (document.querySelector('input[name="deliver"]:checked').value == 'delivery'){
-		orderAddress.style.display = 'block';
+		orderAddress.style.display = 'flex';
 	}
 	else{
 		orderAddress.style.display = 'none';
