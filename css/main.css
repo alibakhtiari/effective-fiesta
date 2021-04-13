@@ -115,27 +115,14 @@ video {
   transition: background-color .4s ease-in-out;
 }
 
-.crp {
-  background: #ffd13a;
-  cursor: pointer;
-  color: #222;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 1.2rem;
+.order {
   position: fixed;
-  left: 10px;
-  bottom: 10px;
-  border-radius: 5px 5px 0px 0px;
-  -webkit-transition: background-color .4s ease-in-out;
-  -moz-transition: background-color .4s ease-in-out;
-  -ms-transition: background-color .4s ease-in-out;
-  -o-transition: background-color .4s ease-in-out;
-  transition: background-color .4s ease-in-out;
+  left: 0;
+  bottom: 18px;
   z-index: 9999;
 }
 
-.covid_modal:hover,
-.crp:hover {
+.covid_modal:hover{
   color: #fff;
   background: #222;
 }
@@ -167,6 +154,26 @@ video {
   top: 8px;
   right: 8px;
   padding: 8px 12.5px;
+}
+.oTimerCointainer{
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 10px;
+  background: #D04429;
+  position: absolute;
+  cursor: pointer;
+  top: 50px;
+  right: 8px;
+  padding: 5px ;
+}
+#modal_order .modal_contnet{
+  background-color: #eee;
+}
+.price{
+  padding:10px;
+  margin: 20px 20px 20px 0;
+  background-color: #ccc;
+  color: #333;
 }
 
 /* hero sections*/
@@ -322,7 +329,7 @@ video {
   box-shadow: 0 3px 6px -4px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
 }
 
-.main_header .cta {
+.crp {
   position: absolute;
   right: 10px;
   top: 14px;
@@ -664,7 +671,18 @@ span.line {
   -o-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
-
+.cta_container.sign_up {
+  padding-top: 50px;
+}
+.cta_container.sign_up .cta {
+  padding: 20px;
+}
+#about .cta_container {
+  padding-top: 30px;
+}
+.order .cta {
+  margin-left: 8px ;
+}
 a.cta:hover,
 #pizza_history a:hover {
   background-color: #D04429;
@@ -1152,10 +1170,8 @@ img.responsive:hover {
     animation-duration: 0.9s;
   }
 
-  .main_header .cta {
-    right: auto;
-    left: 10px;
-    top: 13px;
+  .crp {
+    display: none;
   }
 
   .card {
@@ -1219,7 +1235,12 @@ img.responsive:hover {
     padding: 40px;
     width: 70%;
   }
-
+  .oTimerCointainer{
+    font-size: 1rem;
+  }
+  #modal_order .onlineoderform {
+    margin-top: 70px;
+  }
   .covid_modal {
     padding: 10px;
     font-size: 1rem;
@@ -1333,6 +1354,9 @@ img.responsive:hover {
 
   ul.sub_menu li {
     padding: 5px;
+  }
+  .button.order_now {
+    margin: 0;
   }
 }
 

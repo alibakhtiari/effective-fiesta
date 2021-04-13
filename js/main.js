@@ -11,18 +11,7 @@ window.addEventListener('load', (event) => {
 });
 //get author name from meta
 document.querySelector('.designer_name').innerText = document.querySelector('meta[name="author"]').content;
-// order
-var topping = document.querySelector('.topping');
-function showOp () {
-	topping.style.display = 'block';
-}
-function hideOp () {
-	topping.style.display = 'none';
-}
-
-
-
-//go to top 
+//scroll to top 
 document.addEventListener("scroll", handleScroll);
 var scrollToTopBtn = document.querySelector(".scroll-top");
 function handleScroll() {
@@ -81,7 +70,7 @@ last_mod.innerHTML = 'last updated or modified : ' + bom_mod;
 // modal window
 var cButton = document.querySelector('.covid_modal'),
 	modal = document.querySelector('#modal'),
-	oButton = document.querySelector('.main_header .cta'),
+	oButton = document.querySelector('.order'),
 	orderInner = document.querySelector('.modal_contnet'),
 	cClose = document.querySelector('.order_close'),
 	orderModal = document.querySelector('#modal_order');
@@ -93,7 +82,27 @@ oButton.onclick = function () {
 	orderModal.style.display = 'block';
 	document.body.style.overflowY = 'hidden';
 	orderIsOpen = true;
+	// Order Countdown
+var orderTime = new Date().getTime()+1140000;
+var oTimeCointainer = document.querySelector(".order_timer");
+function oTime() {
+	var dNow = new Date().getTime();
+	var diff = orderTime - dNow;
+	var cSeconds = 1000;
+	var cMinutes = 1000 * 60;
+	var cHours = cMinutes * 60;
+	var minutesLeft = Math.round((diff % cHours) / cMinutes);
+	var secondsLeft = Math.round((diff % cMinutes) / cSeconds);
+	oTimeCointainer.innerHTML = minutesLeft + ":" + secondsLeft;
+
+	if (diff < 0) {
+		oTimeCointainer.innerHTML = '<strong>Times Up!</strong>';
+	}
 }
+var oTimer = setInterval(oTime, 1000)
+}
+
+
 modal.onclick = function () {
 	modal.style.display = 'none';
 	document.body.style.overflowY = 'auto';
@@ -101,6 +110,8 @@ modal.onclick = function () {
 cClose.onclick = function () {
 	orderModal.style.display = 'none';
 	document.body.style.overflowY = 'auto';
+	clearInterval(oTime);
+	oTime = 0;
 }
 
 // open modal with href
@@ -108,6 +119,16 @@ if (location.hash == '#modal') {
 	modal.style.display = 'block';
 	document.body.style.overflowY = 'hidden';
 }
+
+//Order Calculation
+
+	function calcOrder () {
+		var tPrice = document.querySelector('.total_price'),
+			dPrice = parseFloat(document.querySelector('input[name="drinks"]:checked').value),
+			pPrice = parseFloat(document.querySelector('input[name="pizza-type"]:checked').value);
+		tPrice.innerText = dPrice + pPrice;
+	}
+	
 
 // form validation
 var vName, vEmail, vMessage = false;
@@ -199,12 +220,6 @@ if (isHome) {
 		var minutesLeft = Math.round((diff % cHours) / cMinutes);
 		var secondsLeft = Math.round((diff % cMinutes) / cSeconds);
 
-		// Output the result in an element with id="demo"
 		countdownDiv.innerHTML = "<h2>Time Left To Our Next Branch Openning</h2><span class='days'>" + daysLeft + "</span><span class='hours'>" + hoursLeft + "</span><span class='minutes'>" + minutesLeft + "</span><span class='seconds'>" + secondsLeft + "</span>";
-
-		// If the count down is over, write some text 
-		if (diff < 0) {
-
-		}
 	}, 1000)
 };

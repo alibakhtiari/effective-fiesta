@@ -57,9 +57,10 @@
         <li class="nav_list_items about_m"><a href="#about">about us</a></li>
         <li class="nav_list_items"><a href="menu.html">our menu</a></li>
         <li class="nav_list_items"><a href="contact.html">contact us</a></li>
+        <li class="nav_list_items"><a href="crp.html" class="crp">Cross Reference Page</a></li>
       </ul>
     </nav>
-    <a class='cta' href='#'>Order</a>
+    <a href="crp.html" class="crp">Cross Reference Page</a>
   </header>
   <!-- This fulfills requirement 2.4.1 b II-->
   <section id="hero" class="hero_section">
@@ -90,7 +91,7 @@
         <a href="menu.html" title="View Menu" class="card_button">View Menu</a>
       </div>
     </div>
-    <div class="col-4 col-sm col-md col-lg card_bg">
+    <div class="col-4 col-sm col-md col-lg">
       <div class="card">
         <h2 class="card_title">it's Meat day</h2>
         <p>10% off on Pepperoni Meatza</p>
@@ -106,6 +107,8 @@
         <a href="menu.html" title="View Menu" class="card_button">View Menu</a>
       </div>
     </div>
+    <!-- This fulfills requirement 2.4.8-->
+    <div class="cta_container sign_up"><a class='cta' href='#'>sign up to get latest deals</a></div>
   </section>
   <section id="about" class="flex col s-padd">
     <div class="col-6 col-sm">
@@ -115,8 +118,10 @@
         create a light and digestible pizza with flavors that explode in your mouth.<br>Pizza Kitchen's Pizza is a
         pizzeria located in Kamloops (BC). We invite you to taste the goodness of our specialty pizzas and bruschetta,
         all of which are freshly baked and served with love.</p>
-
+        <!-- This fulfills requirement 2.4.8-->
+        <div class="cta_container"><a class="cta" href="contact.html">Join our team</a></div>
     </div>
+
     <div class="about_bg col-6 col-sm">
       <!-- This fulfills requirement 2.4.5 a II-->
       <video autoplay muted loop id="hero_vid" loading="lazy">
@@ -188,7 +193,7 @@
         d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z" />
     </svg></a>
   <a href="index.html#modal" class="covid_modal">Covid-19 Updates</a>
-  <a href="crp.html" class="crp">Cross Reference Page</a>
+  <div class='order'><a class='cta' href='#'>Order Now</a> <a class="cta" href="tel:2505727634">(250)572-7634</a></div>
   <div class="modal" id="modal">
     <div class="modal_contnet">
       <a class="close_button">x</a>
@@ -208,72 +213,80 @@
   <div class="modal" id="modal_order">
     <div class="modal_contnet">
       <a class="order_close">x</a>
+      <div class="oTimerCointainer">
+      <p><strong>Time left to order:</strong>
+      <span class="order_timer">20:00</span></p>
+    </div>
       <!-- This fulfills requirement 2.4.3-->
       <form class="onlineoderform flex col col-sm col-md">
         <div class="flex col col-6 col-sm col-md col- lg">
           <h2>Pizza type</h2>
           <div class="pizza_name col flex col-12">
-            <input id="pizza-pmeatza" name="pizza-type" type="radio" value="Pepperoni Meatza" onclick="hideOp()"
-              class="pizza-type">
+            <input id="pizza-pmeatza" name="pizza-type" type="radio" value="20" onclick="calcOrder()" checked class="pizza-type">
             <label for="pizza-pmeatza"><strong>Pepperoni Meatza</strong></label>
           </div>
           <div class="pizza_name col flex col-12">
-            <input id="pizza-bcheese" name="pizza-type" type="radio" value="Blue cheese" onclick="hideOp()"
+            <input id="pizza-bcheese" name="pizza-type" type="radio" value="14" onclick="calcOrder()"
               class="pizza-type">
             <label for="pizza-bcheese"><strong>Blue Cheese, Walnut, and Pear Pizza</strong></label>
           </div>
           <div class="pizza_name col flex col-12">
-            <input id="pizza-cpepperoni" name="pizza-type" type="radio" value="Campfire Pepperoni" onclick="hideOp()"
+            <input id="pizza-cpepperoni" name="pizza-type" type="radio" value="12" onclick="calcOrder()"
               class="pizza-type">
             <label for="pizza-cpepperoni"><strong>Campfire Pepperoni Pizza</strong></label>
           </div>
           <div class="pizza_name col flex col-12">
-            <input id="pizza-barbeque" name="pizza-type" type="radio" value="barbeque" onclick="hideOp()"
+            <input id="pizza-barbeque" name="pizza-type" type="radio" value="14" onclick="calcOrder()"
               class="pizza-type">
             <label for="pizza-barbeque"><strong>Barbeque Chicken Grilled Pizza</strong></label>
           </div>
           <div class="pizza_name col flex col-12">
-            <input id="pizza-mediterranean" name="pizza-type" type="radio" value="Mediterranean" onclick="hideOp()"
+            <input id="pizza-mediterranean" name="pizza-type" type="radio" value="12" onclick="calcOrder()"
               class="pizza-type">
             <label for="pizza-mediterranean"><strong>Mediterranean Pesto Pizza</strong></label>
           </div>
-          <div class="pizza_name custom_option col flex col-12">
-            <input id="type-custom" name="pizza-type" type="radio" value="custom" onclick="showOp()" class="pizza-type">
-            <label for="type-custom"><strong>Custom</strong> (design your own!)</label>
-          </div>
-          <div class="col flex col-12">
-            <label class="label select_label" for="pizza-size"><strong>Size</strong></label>
-            <select class="select" name="pizza-size">
-              <option value="s">Small</option>
-              <option value="m">Medium</option>
-              <option value="l" selected>Large</option>
-              <option value="xl">Extra large</option>
-            </select>
-          </div>
         </div>
         <div class="flex col col-6 col-sm col-md col- lg">
-          <div class="col flex col-12 topping" style="display: none;">
-            <h2>Toppings</h2>
+          <div class="col flex col-12" >
+            <h2>Drinks</h2>
 
             <div class="col flex col-12">
-              <input id="topping-cheese" name="cheese" type="checkbox" value="cheese" checked>
-              <label for="topping-cheese"><strong>Cheese</strong></label>
+              <input id="drinks-cola" name="drinks" type="radio" value="5" onclick="calcOrder()" checked>
+              <label for="drinks-cola"><strong>Coca-Cola</strong></label>
             </div>
             <div class="col flex col-12">
-              <input id="topping-beef" name="topping" type="checkbox" value="beef" checked>
-              <label for="topping-beef"><strong>Ground beef</strong></label>
+              <input id="drinks-pepsi" name="drinks" type="radio" value="2.5" onclick="calcOrder()">
+              <label for="drinks-pepsi"><strong>Pepsi</strong></label>
             </div>
             <div class="col flex col-12">
-              <input id="topping-spinach" name="topping" type="checkbox" value="spinach" checked>
-              <label for="topping-spinach"><strong>Fresh spinach</strong></label>
+              <input id="drinks-fanta" name="drinks" type="radio" value="2.5" onclick="calcOrder()">
+              <label for="drinks-fanta"><strong>Fanta</strong></label>
             </div>
             <div class="col flex col-12">
-              <input id="topping-peppers" name="topping" type="checkbox" value="peppers">
-              <label for="topping-peppers"><strong>Grilled peppers</strong></label>
+              <input id="drinks-soda" name="drinks" type="radio" value="4" onclick="calcOrder()">
+              <label for="drinks-soda"><strong>Lime Soda</strong></label>
+            </div>
+            <div class="col flex col-12">
+              <input id="drinks-water" name="drinks" type="radio" value="2" onclick="calcOrder()">
+              <label for="drinks-water"><strong>Minearal Water</strong></label>
+            </div>
+            <div class="col flex col-12">
+            <h2>Delivery Method</h2></div>
+            <div class="col flex col-6">
+              <input id="carry" name="deliver" type="radio" value="carry">
+              <label for="carry"><strong>Carry out</strong></label>
+            </div>
+            <div class="col flex col-6">
+              <input id="delivery" name="deliver" type="radio" value="delivery">
+              <label for="delivery"><strong>Delivery</strong></label>
             </div>
           </div>
+          
         </div>
-        <input type="submit" class="button" value="Place Order" disabled>
+        <div class="price">Total Price: <span class="total_price">25</span> CAD</div>
+        <input type="submit" class="button order_now" value="Place Order" disabled>
+
+        
       </form>
     </div>
 
